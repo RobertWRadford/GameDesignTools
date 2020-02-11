@@ -1,19 +1,10 @@
 import random
 
-trial="yes"
-
-def newGame():
-        global trial
-        trial = str(input("Do you want to play again? "))
-        if  trial == "yes":
-                guessingGame()
-        elif trial == "no":
-                print("Thanks for playing!")
-        elif trial != "yes" or "no":
-                print("Answer yes or no please.")
-                newGame()
+def newGame(trial):
+	trial = str(input("Do you want to play again? "))
+	return(trial)
                 
-def guessingGame():
+def guessingGame(trial):
 	ans = random.randint(1,101)
 
 	guess = int(input("Guess a number from 1 to 100 "))
@@ -33,10 +24,13 @@ def guessingGame():
 			print("Just under! ")
 		guess = int(input("Try again! "))
 	print("On the money!")
-	newGame()
+	newGame(trial)
+	return(trial)
 
-if trial == "yes":
-        guessingGame()
-else:
-        exit()
+def main():
+	trial="yes"
+	while trial == "yes" or "Yes" or "y" or "Y":
+		trial = guessingGame(trial)
+	exit()
         
+main()
