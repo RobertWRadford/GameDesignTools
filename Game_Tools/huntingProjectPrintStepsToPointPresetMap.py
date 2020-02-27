@@ -72,10 +72,6 @@ def map3():
 	
 	curY = 6
 	curX = 30
-	lastRow = 29
-	lastCol = 39
-
-	T = 0
 
 	huntY = 19
 	huntX = 5
