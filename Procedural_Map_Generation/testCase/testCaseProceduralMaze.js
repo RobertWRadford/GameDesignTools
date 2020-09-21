@@ -4,7 +4,7 @@
 
 var mapData = [];
 
-var mapSize = 1000;
+var mapSize = 50;
 var mapMargin = mapSize / 3;
 
 var divEl = document.getElementById('table here');
